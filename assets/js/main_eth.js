@@ -92,7 +92,7 @@ function refreshData(){
     contractBalance(function(result){
         //rawStr = numberWithCommas(Number(result).toFixed(3));
         //balanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
-        balanceElem.textContent = Number(result).toFixed(3).toLocaleString() + ' WBNB';
+        balanceElem.textContent = Number(result).toFixed(6).toLocaleString() + ' WBNB';
 		
     });
 
@@ -100,7 +100,7 @@ function refreshData(){
     userBalance(function(result){
         //rawStr = numberWithCommas(Number(result).toFixed(3));
         //userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
-        userBalanceElem.textContent = Number(result).toFixed(3).toLocaleString() + ' WBNB';
+        userBalanceElem.textContent = Number(result).toFixed(6).toLocaleString() + ' WBNB';
     });
 
     lastHatch(currentAddr,function(lh){
