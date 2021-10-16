@@ -90,14 +90,17 @@ function refreshData(){
     var balanceElem = document.getElementById('contract-balance');
     var baseNum = 0;
     contractBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
-        balanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
+        //rawStr = numberWithCommas(Number(result).toFixed(3));
+        //balanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
+        balanceElem.textContent = Number(result).toFixed(3).toLocaleString() + ' WBNB';
+		
     });
 
     var userBalanceElem = document.getElementById('user-balance');
     userBalance(function(result){
-        rawStr = numberWithCommas(Number(result).toFixed(3));
-        userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
+        //rawStr = numberWithCommas(Number(result).toFixed(3));
+        //userBalanceElem.textContent = stripDecimals(rawStr, 3) + ' WBNB';
+        userBalanceElem.textContent = Number(result).toFixed(3).toLocaleString() + ' WBNB';
     });
 
     lastHatch(currentAddr,function(lh){
